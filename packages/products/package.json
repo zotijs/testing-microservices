@@ -1,0 +1,35 @@
+{
+  "name": "products",
+  "version": "1.0.0",
+  "description": "The products service",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "vite-node --watch ./src/index.ts",
+    "lint": "eslint --ext ts --report-unused-disable-directives",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vite",
+    "vite-node",
+    "vitest",
+    "fastify"
+  ],
+  "author": "zotijs",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "@typescript-eslint/eslint-plugin": "^6.17.0",
+    "@typescript-eslint/parser": "^6.17.0",
+    "eslint": "^8.56.0",
+    "pino-pretty": "^10.3.1",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10",
+    "vite-node": "^1.1.1",
+    "vite-tsconfig-paths": "^4.2.3",
+    "vitest": "^1.1.1"
+  },
+  "dependencies": {
+    "fastify": "^4.25.2"
+  }
+}
