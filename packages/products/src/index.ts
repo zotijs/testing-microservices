@@ -5,9 +5,12 @@ const start = () => {
   // vite-node HMR
   if (import.meta.hot) {
     import.meta.hot.accept(() => {
-      app.close().then(() => {
-        app.log.info("[HMR] Restarting Server");
-      });
+      app
+        .close()
+        .then(() => {
+          app.log.info("[HMR] Restarting Server");
+        })
+        .catch((err: Error) => app.log.error(`HMR Error: ${err.name}`, err));
     });
   }
 

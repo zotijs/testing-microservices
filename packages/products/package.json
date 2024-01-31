@@ -6,7 +6,7 @@
   "main": "dist/index.js",
   "scripts": {
     "dev": "vite-node --watch ./src/index.ts",
-    "lint": "eslint --ext ts --report-unused-disable-directives",
+    "lint": "eslint . --ext .ts --report-unused-disable-directives",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -30,6 +30,7 @@
     "vitest": "^1.1.1"
   },
   "dependencies": {
+    "common": "workspace:^",
     "fastify": "^4.25.2"
   }
 }

@@ -19,17 +19,16 @@
   },
   "scripts": {
     "build": "tsc && vite build",
+    "lint": "eslint . --ext .ts --report-unused-disable-directives",
     "test": "vitest"
   },
   "keywords": [
     "vite",
-    "fastify",
-    "prisma"
+    "fastify"
   ],
   "author": "zotijs",
   "license": "ISC",
   "devDependencies": {
-    "@prisma/client": "^5.7.1",
     "@typescript-eslint/eslint-plugin": "^6.17.0",
     "@typescript-eslint/parser": "^6.17.0",
     "eslint": "^8.56.0",
@@ -43,7 +42,6 @@
     "fastify-plugin": "^4.5.1"
   },
   "peerDependencies": {
-    "@prisma/client": "^5.7.1",
     "fastify": "^4.25.2"
   }
 }

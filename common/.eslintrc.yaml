@@ -1,7 +1,13 @@
 parser: "@typescript-eslint/parser"
+parserOptions:
+  project: true
 extends:
   - "eslint:recommended"
-  - "plugin:@typescript-eslint/recommended"
+  - "plugin:@typescript-eslint/recommended-type-checked"
+plugins:
+  - "@typescript-eslint"
 ignorePatterns:
   - dist
   - ".eslintrc.*"
+  - "vite.config.ts"
+root: true

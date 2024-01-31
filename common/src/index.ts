@@ -1,3 +1,3 @@
-import prismaPlugin from "./fastify-prisma-plugin/prismaPlugin";
+import healthPlugin from "./fastify-health-plugin/healthPlugin";
 
-export { prismaPlugin };
+export { healthPlugin };
