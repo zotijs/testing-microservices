@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/require-await */
 import { FastifyPluginAsync, FastifyPluginOptions } from "fastify";
 import {
   readOneOptions,
