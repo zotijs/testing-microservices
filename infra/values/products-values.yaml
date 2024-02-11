@@ -1,0 +1,6 @@
+image:
+  repository: zotijs/products
+  tag: v1.0.0
+
+service:
+  port: 4000

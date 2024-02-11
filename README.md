@@ -32,6 +32,7 @@ Commands:
 
 - start: `minikube start`
 - stop: `minikube stop`
+- dashboard: `minikube dashboard`
 
 ### Kubectl
 
@@ -44,21 +45,6 @@ Install: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
 [helm](https://helm.sh/docs/) is the package manager for Kubernetes.
 
 Install: https://helm.sh/docs/intro/install/
-
-## Modules
-
-### Prisma
-
-Prisma is being used as the ORM for all the services. More info for prisma setup [here](https://www.prisma.io/docs/orm/tools/prisma-cli#installation)
-
-TL;DR:
-
-```
-pnpm add -D prisma
-pnpm dlx prisma
-```
-
-Nice example [repo](https://github.com/2color/fastify-graphql-nexus-prisma)
 
 ## Resources
 

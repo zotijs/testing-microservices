@@ -1,0 +1,21 @@
+apiVersion: skaffold/v4beta9
+kind: Config
+build:
+  artifacts:
+    - image: zotijs/products
+      context: packages/products
+      docker:
+        cacheFrom:
+          # Local Docker builder replaces cache references to the artifact image with
+          # the tagged image reference, useful for caching from the previous build.
+          - zotijs/products
+  local:
+    push: false
+deploy:
+  helm:
+    releases:
+      - name: products
+        chartPath: infra
+        valuesFiles:
+          - infra/values/products-values.yaml
+        wait: true
