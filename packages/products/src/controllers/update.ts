@@ -34,5 +34,5 @@ export const updateHandler = async (
 ) => {
   const { id, name, description } = request.body;
 
-  reply.send({ id, name, description });
+  await reply.send({ id, name, description });
 };

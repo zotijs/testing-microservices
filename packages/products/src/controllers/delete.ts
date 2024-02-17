@@ -21,5 +21,5 @@ export const deleteHandler = async (
 ) => {
   // const { id } = request.body;
 
-  reply.send();
+  await reply.send();
 };

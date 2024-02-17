@@ -21,5 +21,5 @@ export const readManyHandler = async (
   request: FastifyRequest,
   reply: FastifyReply
 ) => {
-  reply.send({ hello: ["1", "2", "3", "4"] });
+  await reply.send({ hello: ["1", "2", "3", "4"] });
 };

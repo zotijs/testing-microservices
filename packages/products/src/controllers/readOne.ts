@@ -23,5 +23,5 @@ export const readOneHandler = async (
 ) => {
   const { id } = request.params;
 
-  reply.send({ hello: id });
+  await reply.send({ hello: id });
 };

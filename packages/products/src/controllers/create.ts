@@ -32,5 +32,5 @@ export const createHandler = async (
 ) => {
   const { name, description } = request.body;
 
-  reply.send({ id: Date.now(), name, description });
+  await reply.send({ id: Date.now(), name, description });
 };
