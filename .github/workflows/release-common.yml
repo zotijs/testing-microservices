@@ -1,6 +1,11 @@
-name: Pull Request CI
+name: Release Commonn
 
-on: [pull_request]
+on:
+  push:
+    branches:
+      - main
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   build:
@@ -17,18 +22,3 @@ jobs:
           cache: "pnpm"
       - name: Install dependencies
         run: pnpm install
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Run lint
-        run: pnpm lint
-  types:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Run typechecking
-        run: pnpm typechecks
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Run tests
-        run: pnpm test

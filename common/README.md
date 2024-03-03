@@ -7,7 +7,6 @@ A library with all the shared code between the packages
 ### Fastify Health Plugin
 
 `src/fastify-health-plugin` decorates fastify instance with a health route.
-More info [here](https://www.prisma.io/fastify)
 
 Usage:
 

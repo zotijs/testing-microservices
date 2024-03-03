@@ -1,5 +1,5 @@
 {
-  "name": "common",
+  "name": "@zotijstestingms/common",
   "version": "1.0.0",
   "description": "A library with the common code of the packages",
   "type": "module",
@@ -20,6 +20,7 @@
   "scripts": {
     "build": "tsc && vite build",
     "lint": "eslint . --ext .ts --report-unused-disable-directives",
+    "typechecks": "tsc --noEmit",
     "test": "vitest"
   },
   "keywords": [

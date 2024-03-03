@@ -5,8 +5,8 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  common:
-    specifier: workspace:^
+  '@zotijstestingms/common':
+    specifier: ^1.0.0
     version: link:../../common
   fastify:
     specifier: ^4.26.1
