@@ -4,6 +4,10 @@ An implementation of Honeycomb testing with Microservices
 
 ## Prerequisites
 
+### Docker
+
+Install [docker](https://docs.docker.com/engine/install/) and enable [buildKit](https://docs.docker.com/build/buildkit/)
+
 ### Minikube
 
 [minikube](https://minikube.sigs.k8s.io/docs/start/) is local Kubernetes, focusing on making it easy to learn and develop for Kubernetes.

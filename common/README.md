@@ -4,18 +4,18 @@ A library with all the shared code between the packages
 
 ## Modules
 
-### Fastify Prisma Plugin
+### Fastify Health Plugin
 
-`src/fastify-prisma-plugin` decorates fastify instance with a prisma client.
+`src/fastify-health-plugin` decorates fastify instance with a health route.
 More info [here](https://www.prisma.io/fastify)
 
 Usage:
 
 ```
 import fastify from 'fastify'
-import { prismaPlugin } from 'commons'
+import { healthPlugin } from 'commons'
 
 const app = fastify()
 
-app.register(prismaPlugin)
+app.register(healthPlugin)
 ```
