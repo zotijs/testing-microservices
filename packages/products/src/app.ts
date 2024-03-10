@@ -1,5 +1,5 @@
 import fastify from "fastify";
-import { healthPlugin } from "common";
+import { healthPlugin } from "@zotijstestingms/common";
 import { NODE_ENV, LOGGER_SETUP } from "config";
 
 import { v1Routes } from "./routes";

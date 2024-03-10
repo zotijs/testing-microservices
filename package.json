@@ -6,7 +6,13 @@
   "scripts": {
     "lint": "pnpm --parallel --filter \"./**\" lint",
     "typechecks": "pnpm --parallel --filter \"./**\" typechecks",
-    "test": "pnpm --parallel --filter \"./**\" test"
+    "test": "pnpm --parallel --filter \"./**\" test",
+    "//--COMMON--//": "====SCRIPTS FOR COMMON PACKAGE====",
+    "build:common": "pnpm --filter \"./common\" build",
+    "lint:common": "pnpm --filter \"./common\" lint",
+    "typechecks:common": "pnpm --filter \"./common\" typechecks",
+    "test:common": "pnpm --filter \"./common\" test",
+    "release:common": "pnpm --filter \"./common\" release"
   },
   "keywords": [],
   "author": "",
