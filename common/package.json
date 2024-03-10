@@ -22,7 +22,7 @@
     "lint": "eslint . --ext .ts --report-unused-disable-directives",
     "typechecks": "tsc --noEmit",
     "test": "vitest",
-    "release": "changesets publish"
+    "release": "changeset publish"
   },
   "keywords": [
     "vite",
