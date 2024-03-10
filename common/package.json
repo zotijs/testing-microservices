@@ -21,7 +21,8 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext .ts --report-unused-disable-directives",
     "typechecks": "tsc --noEmit",
-    "test": "vitest"
+    "test": "vitest",
+    "release": "changesets publish"
   },
   "keywords": [
     "vite",
