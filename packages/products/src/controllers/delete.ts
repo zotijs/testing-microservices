@@ -19,7 +19,9 @@ export const deleteHandler = async (
   request: FastifyRequest<{ Body: DeleteRequestBody }>,
   reply: FastifyReply
 ) => {
-  // const { id } = request.body;
+  const { id } = request.body;
+
+  request.log.info(`Deleting product with id: ${id}`);
 
   await reply.send();
 };
