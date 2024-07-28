@@ -1,6 +1,6 @@
 {
   "name": "@zotijstestingms/config-eslint",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Common eslint configuration",
   "type": "module",
   "main": "./dist/index.umd.cjs",
