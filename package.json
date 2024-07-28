@@ -17,7 +17,7 @@
     "build:config-eslint": "pnpm --filter \"./libraries/config-eslint\" build",
     "//--CHANGESETS--//": "====SCRIPTS FOR CHANGESETS====",
     "changeset": "changeset",
-    "version-packages": "changeset version",
+    "version:packages": "changeset version",
     "release": "pnpm build:libraries && changeset publish"
   },
   "keywords": [],
