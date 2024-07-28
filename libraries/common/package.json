@@ -1,6 +1,6 @@
 {
   "name": "@zotijstestingms/common",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A library with the common code of the packages",
   "type": "module",
   "files": [
