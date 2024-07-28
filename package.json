@@ -7,22 +7,24 @@
     "lint": "pnpm --parallel --filter \"./**\" lint",
     "typechecks": "pnpm --parallel --filter \"./**\" typechecks",
     "test": "pnpm --parallel --filter \"./**\" test",
+    "build:libraries": "pnpm --filter \"./libraries/**\" build",
     "//--COMMON--//": "====SCRIPTS FOR COMMON LIBRARY====",
     "build:common": "pnpm --filter \"./libraries/common\" build",
     "lint:common": "pnpm --filter \"./libraries/common\" lint",
     "typechecks:common": "pnpm --filter \"./libraries/common\" typechecks",
     "test:common": "pnpm --filter \"./libraries/common\" test",
-    "release:common": "pnpm --filter \"./libraries/common\" release",
     "//--CONFIG ESLINT--//": "====SCRIPTS FOR CONFIG ESLINT LIBRARY====",
     "build:config-eslint": "pnpm --filter \"./libraries/config-eslint\" build",
-    "release:config-eslint": "pnpm --filter \"./libraries/config-eslint\" release",
-    "//--CONFIG TYPESCRIPT--//": "====SCRIPTS FOR CONFIG TYPESCRIPT LIBRARY====",
-    "release:config-typescript": "pnpm --filter \"./libraries/config-typescript\" release"
+    "//--CHANGESETS--//": "====SCRIPTS FOR CHANGESETS====",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "pnpm build:libraries && changeset publish"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@changesets/cli": "^2.27.7"
-  }
+  },
+  "packageManager": "pnpm@9.6.0+sha256.dae0f7e822c56b20979bb5965e3b73b8bdabb6b8b8ef121da6d857508599ca35"
 }
