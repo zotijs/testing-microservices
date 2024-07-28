@@ -1,0 +1,19 @@
+{
+  "name": "@zotijstestingms/config-typescript",
+  "version": "1.0.0",
+  "description": "A common typescript configuration",
+  "files": [
+    "tsconfig.base.json",
+    "tsconfig.lib.json",
+    "README.md"
+  ],
+  "keywords": [
+    "typescript",
+    "tsconfig"
+  ],
+  "author": "zotijs",
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  }
+}

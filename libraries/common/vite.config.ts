@@ -18,7 +18,6 @@ export default defineConfig({
         // TODO: create a function that calculates globals
         globals: {
           fastify: "Fastify",
-          "@prisma/client": "PrismaClient",
         },
       },
     },

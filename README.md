@@ -50,6 +50,10 @@ Install: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
 
 Install: https://helm.sh/docs/intro/install/
 
+## Publishing Libraries
+
+Inspired by [turborepo-with-changesets](https://github.com/vercel/turbo/tree/main/examples/with-changesets)
+
 ## Resources
 
 - Testing of Microservices, spotify [blog](https://engineering.atspotify.com/2018/01/testing-of-microservices/)

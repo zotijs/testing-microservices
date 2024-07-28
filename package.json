@@ -7,17 +7,22 @@
     "lint": "pnpm --parallel --filter \"./**\" lint",
     "typechecks": "pnpm --parallel --filter \"./**\" typechecks",
     "test": "pnpm --parallel --filter \"./**\" test",
-    "//--COMMON--//": "====SCRIPTS FOR COMMON PACKAGE====",
-    "build:common": "pnpm --filter \"./common\" build",
-    "lint:common": "pnpm --filter \"./common\" lint",
-    "typechecks:common": "pnpm --filter \"./common\" typechecks",
-    "test:common": "pnpm --filter \"./common\" test",
-    "release:common": "pnpm --filter \"./common\" release"
+    "//--COMMON--//": "====SCRIPTS FOR COMMON LIBRARY====",
+    "build:common": "pnpm --filter \"./libraries/common\" build",
+    "lint:common": "pnpm --filter \"./libraries/common\" lint",
+    "typechecks:common": "pnpm --filter \"./libraries/common\" typechecks",
+    "test:common": "pnpm --filter \"./libraries/common\" test",
+    "release:common": "pnpm --filter \"./libraries/common\" release",
+    "//--CONFIG ESLINT--//": "====SCRIPTS FOR CONFIG ESLINT LIBRARY====",
+    "build:config-eslint": "pnpm --filter \"./libraries/config-eslint\" build",
+    "release:config-eslint": "pnpm --filter \"./libraries/config-eslint\" release",
+    "//--CONFIG TYPESCRIPT--//": "====SCRIPTS FOR CONFIG TYPESCRIPT LIBRARY====",
+    "release:config-typescript": "pnpm --filter \"./libraries/config-typescript\" release"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@changesets/cli": "^2.27.1"
+    "@changesets/cli": "^2.27.7"
   }
 }

@@ -1,0 +1,5 @@
+{
+  "extends": "@zotijstestingms/config-typescript/tsconfig.lib.json",
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}

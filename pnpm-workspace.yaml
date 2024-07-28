@@ -1,4 +1,4 @@
 packages:
   - "infra"
-  - "common"
+  - "libraries/**"
   - "packages/**"
