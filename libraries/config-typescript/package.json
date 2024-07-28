@@ -1,7 +1,7 @@
 {
   "name": "@zotijstestingms/config-typescript",
   "version": "1.0.2",
-  "description": "A common typescript configuration",
+  "description": "A library with common typescript configuration",
   "files": [
     "tsconfig.base.json",
     "tsconfig.lib.json",

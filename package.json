@@ -1,8 +1,8 @@
 {
   "name": "testing-microservices",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Testing Microservices",
+  "private": true,
   "scripts": {
     "lint": "pnpm --parallel --filter \"./**\" lint",
     "typechecks": "pnpm --parallel --filter \"./**\" typechecks",

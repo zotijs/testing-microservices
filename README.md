@@ -54,6 +54,10 @@ Install: https://helm.sh/docs/intro/install/
 
 Inspired by [turborepo-with-changesets](https://github.com/vercel/turbo/tree/main/examples/with-changesets)
 
+**Lessons learned:**
+
+- When you are dealing with scoped registries (like a monorepo) you need to create the organization in [npm](https://www.npmjs.com/) before publishing
+
 ## Resources
 
 - Testing of Microservices, spotify [blog](https://engineering.atspotify.com/2018/01/testing-of-microservices/)
