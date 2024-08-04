@@ -1,55 +1,79 @@
 import { FastifyPluginAsync, FastifyPluginOptions } from "fastify";
 import {
-  readOneOptions,
-  readOneHandler,
-  type ReadOneParams,
-  type ReadOneReply,
-  readManyOptions,
-  readManyHandler,
-  type ReadManyReply,
+  createProduct,
+  type CreateProduct,
+  type CreateProductResult,
+} from "services/create";
+import { deleteProduct, type DeleteProductResult } from "services/delete";
+import {
+  listProducts,
+  type ListProducts,
+  type ListProductsResult,
+} from "services/list";
+import { readProduct, type ReadProductResult } from "services/read";
+import {
+  updateProduct,
+  type UpdateProduct,
+  type UpdateProductResult,
+} from "services/update";
+import {
   createOptions,
-  createHandler,
-  type CreateRequestBody,
-  type CreateReply,
   deleteOptions,
-  deleteHandler,
-  type DeleteRequestBody,
+  listOptions,
+  readOptions,
   updateOptions,
-  updateHandler,
-  type UpdateRequestBody,
-  type UpdateReply,
-} from "controllers";
+} from "./schemas";
 
 export const routes: FastifyPluginAsync<FastifyPluginOptions> = async (
   fastify
 ) => {
-  fastify.get<{ Reply: ReadManyReply }>(
+  fastify.get<{ Querystring: ListProducts; Reply: ListProductsResult }>(
     "/products",
-    readManyOptions,
-    readManyHandler
+    listOptions,
+    async (request, reply) => {
+      const products = await listProducts(request.query);
+
+      reply.send(products);
+    }
   );
 
-  fastify.get<{ Params: ReadOneParams; Reply: ReadOneReply }>(
+  fastify.get<{ Params: { id: string }; Reply: ReadProductResult }>(
     "/products/:id",
-    readOneOptions,
-    readOneHandler
+    readOptions,
+    async (request, reply) => {
+      const product = await readProduct(request.params.id);
+
+      reply.send(product);
+    }
   );
 
-  fastify.put<{ Body: CreateRequestBody; Reply: CreateReply }>(
+  fastify.put<{ Body: CreateProduct; Reply: CreateProductResult }>(
     "/products",
     createOptions,
-    createHandler
+    async (request, reply) => {
+      const newProductId = await createProduct(request.body);
+
+      reply.send(newProductId);
+    }
   );
 
-  fastify.patch<{ Body: UpdateRequestBody; Reply: UpdateReply }>(
+  fastify.patch<{ Body: UpdateProduct; Reply: UpdateProductResult }>(
     "/products",
     updateOptions,
-    updateHandler
+    async (request, reply) => {
+      const updatedProduct = await updateProduct(request.body);
+
+      reply.send(updatedProduct);
+    }
   );
 
-  fastify.delete<{ Body: DeleteRequestBody }>(
+  fastify.delete<{ Params: { id: string }; Reply: DeleteProductResult }>(
     "/products",
     deleteOptions,
-    deleteHandler
+    async (request, reply) => {
+      const deletedProductId = await deleteProduct(request.params.id);
+
+      reply.send(deletedProductId);
+    }
   );
 };

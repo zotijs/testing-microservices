@@ -1,5 +1,5 @@
 export * from "./create";
 export * from "./delete";
-export * from "./readOne";
-export * from "./readMany";
+export * from "./list";
+export * from "./read";
 export * from "./update";

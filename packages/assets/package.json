@@ -1,13 +1,13 @@
 {
-  "name": "products",
-  "version": "1.0.2",
-  "description": "The products service",
+  "name": "assets",
+  "version": "1.0.0",
+  "description": "Static assets service",
   "private": true,
   "type": "module",
-  "main": "dist/index.js",
+  "main": "index.js",
   "scripts": {
-    "dev": "tsx watch ./src/index.ts",
-    "build": "vite build",
+    "dev": "tsx watch ./index.ts",
+    "build": "vite build && cp -R ./static ./dist",
     "start": "node dist/index.cjs",
     "lint": "eslint .",
     "typechecks": "tsc --noEmit",
@@ -15,8 +15,8 @@
   },
   "keywords": [
     "vite",
-    "vitest",
-    "fastify"
+    "fastify",
+    "fastify-static"
   ],
   "author": "zotijs",
   "license": "ISC",
@@ -26,7 +26,6 @@
     "@types/node": "^22.0.0",
     "@zotijstestingms/config-eslint": "workspace:*",
     "@zotijstestingms/config-typescript": "workspace:*",
-    "drizzle-kit": "^0.23.0",
     "eslint": "^9.8.0",
     "pino-pretty": "^11.2.2",
     "tsx": "^4.16.5",
@@ -37,9 +36,8 @@
     "vitest": "^2.0.4"
   },
   "dependencies": {
+    "@fastify/static": "^7.0.4",
     "@zotijstestingms/common": "workspace:*",
-    "drizzle-orm": "^0.32.1",
-    "fastify": "^4.28.1",
-    "postgres": "^3.4.4"
+    "fastify": "^4.28.1"
   }
 }
