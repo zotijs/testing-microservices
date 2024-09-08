@@ -7,3 +7,4 @@ dist
 # Just for initial development
 docker-compose.yml
 .bin
+.kafka

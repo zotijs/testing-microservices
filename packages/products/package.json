@@ -21,24 +21,24 @@
   "author": "zotijs",
   "license": "ISC",
   "devDependencies": {
-    "@eslint/js": "^9.8.0",
+    "@eslint/js": "^9.10.0",
     "@types/eslint__js": "^8.42.3",
-    "@types/node": "^22.0.0",
-    "@zotijstestingms/config-eslint": "workspace:*",
-    "@zotijstestingms/config-typescript": "workspace:*",
-    "drizzle-kit": "^0.23.0",
-    "eslint": "^9.8.0",
+    "@types/node": "^22.5.4",
+    "@zotijstestingms/config-eslint": "^1.0.2",
+    "@zotijstestingms/config-typescript": "^1.0.2",
+    "drizzle-kit": "^0.24.2",
+    "eslint": "^9.10.0",
     "pino-pretty": "^11.2.2",
-    "tsx": "^4.16.5",
+    "tsx": "^4.19.0",
     "typescript": "^5.5.4",
-    "typescript-eslint": "^7.17.0",
-    "vite": "^5.3.5",
-    "vite-tsconfig-paths": "^4.3.2",
-    "vitest": "^2.0.4"
+    "typescript-eslint": "^8.4.0",
+    "vite": "^5.4.3",
+    "vite-tsconfig-paths": "^5.0.1",
+    "vitest": "^2.0.5"
   },
   "dependencies": {
-    "@zotijstestingms/common": "workspace:*",
-    "drizzle-orm": "^0.32.1",
+    "@zotijstestingms/common": "^1.0.2",
+    "drizzle-orm": "^0.33.0",
     "fastify": "^4.28.1",
     "postgres": "^3.4.4"
   }
