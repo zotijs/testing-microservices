@@ -5,6 +5,6 @@ export const products = pgTable("products", {
   name: text("name").notNull(),
   description: text("description").notNull(),
   price: numeric("price").notNull(),
-  quantity: integer("quantity"),
+  quantity: integer("quantity").default(0),
   image: text("image"),
 });
