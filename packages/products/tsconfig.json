@@ -8,7 +8,9 @@
       "controllers/*": ["controllers/*"],
       "routes/*": ["routes/*"],
       "services/*": ["services/*"]
-    }
+    },
+    /* Configuration */
+    "target": "ESNext"
   },
   "include": ["src", "vite.config.ts"],
   "exclude": ["node_modules"]

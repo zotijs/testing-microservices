@@ -1,8 +1,10 @@
 type NodeEnv = "development" | "production" | "test";
 
+// Environment
 export const NODE_ENV = (process.env.NODE_ENV as NodeEnv) ?? "development";
-export const PORT = parseInt(process.env.PORT ?? "4000");
+export const PORT = parseInt(process.env.PORT ?? "4000", 10);
 
+// Fastify Logger Setup
 export const LOGGER_SETUP = {
   development: {
     transport: {
@@ -16,6 +18,14 @@ export const LOGGER_SETUP = {
   production: true,
   test: false,
 } as const;
+
+// Database
+export const DATABASE_HOST = process.env.DATABASE_HOST ?? "localhost";
+export const DATABASE_PORT = parseInt(process.env.DATABASE_PORT ?? "5432", 10);
+export const DATABASE_USER = process.env.DATABASE_USER;
+export const DATABASE_PASSWORD = process.env.DATABASE_PASSWORD;
+export const DATABASE_NAME = process.env.DATABASE_NAME ?? "products_db";
+export const RUN_MIGRATIONS = process.env.RUN_MIGRATIONS === "true";
 
 // Assets Environment Variables
 export const ASSETS_BASE_URL =
