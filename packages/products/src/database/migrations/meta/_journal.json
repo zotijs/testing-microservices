@@ -15,6 +15,13 @@
       "when": 1739117419306,
       "tag": "0001_seed-tags",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1739118033126,
+      "tag": "0002_seed-products",
+      "breakpoints": true
     }
   ]
 }

@@ -4,7 +4,7 @@ export const deleteOptions = {
       type: "object",
       required: ["id"],
       properties: {
-        id: { type: "string" },
+        id: { type: "number" },
       },
     },
   },
@@ -12,7 +12,7 @@ export const deleteOptions = {
     200: {
       type: "object",
       properties: {
-        id: { type: "string" },
+        id: { type: "number" },
       },
     },
   },

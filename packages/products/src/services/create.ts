@@ -1,17 +1,11 @@
 import { ASSETS_BASE_URL, DEFAULT_PRODUCT_IMAGE_NAME } from "config";
-
-// remove duplicate
-export type CreateProduct = {
-  name: string;
-  description: string;
-  price: number;
-  quantity?: number;
-  image?: string;
-  tags?: string[];
-};
+import {
+  createProduct as createProductRepository,
+  type ProductCreate,
+} from "repositories/products";
 
 export type CreateProductResult = {
-  id: string;
+  id: number;
 };
 
 export const createProduct = async ({
@@ -20,9 +14,16 @@ export const createProduct = async ({
   price,
   quantity = 0,
   image = `${ASSETS_BASE_URL}/${DEFAULT_PRODUCT_IMAGE_NAME}`,
-  tags = [],
-}: CreateProduct): Promise<CreateProductResult> => {
-  console.log(name, description, price, quantity, image, tags);
-  // TODO create product
-  return { id: "1" };
+  tagIds = [],
+}: ProductCreate): Promise<CreateProductResult> => {
+  const newProductId = await createProductRepository({
+    name,
+    description,
+    price,
+    quantity,
+    image,
+    tagIds,
+  });
+
+  return { id: newProductId };
 };

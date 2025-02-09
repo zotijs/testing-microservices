@@ -4,13 +4,13 @@ export const updateOptions = {
       type: "object",
       required: ["id"],
       properties: {
-        id: { type: "string" },
+        id: { type: "number" },
         name: { type: "string" },
         description: { type: "string" },
-        price: { type: "number" },
+        price: { type: "string" },
         quantity: { type: "number" },
         image: { type: "string" },
-        tags: { type: "array", items: { type: "string" } },
+        tagIds: { type: "array", items: { type: "number" } },
       },
     },
     response: {

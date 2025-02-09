@@ -1,11 +1,13 @@
+import { deleteProduct as deleteProductRepository } from "repositories/products";
+
 export type DeleteProductResult = {
-  id: string;
+  id: number;
 };
 
 export const deleteProduct = async (
-  id: string
+  id: number
 ): Promise<DeleteProductResult> => {
-  console.log(id);
-  // TODO delete product
-  return { id };
+  const deletedProductId = await deleteProductRepository(id);
+
+  return { id: deletedProductId };
 };

@@ -2,7 +2,9 @@ import { eq } from "drizzle-orm";
 import { db } from "database";
 import { products, tagsToProducts } from "database/schema";
 
-type ProductUpdate = Partial<Omit<typeof products.$inferInsert, "id">> & {
+export type ProductUpdate = Partial<
+  Omit<typeof products.$inferInsert, "id">
+> & {
   id: number;
   tagIds?: number[];
 };
