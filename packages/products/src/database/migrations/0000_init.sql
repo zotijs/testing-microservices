@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS "products" (
+CREATE TABLE "products" (
 	"id" serial PRIMARY KEY NOT NULL,
 	"name" text NOT NULL,
 	"description" text NOT NULL,
@@ -7,25 +7,17 @@ CREATE TABLE IF NOT EXISTS "products" (
 	"image" text
 );
 --> statement-breakpoint
-CREATE TABLE IF NOT EXISTS "tag" (
+CREATE TABLE "tags" (
 	"id" serial PRIMARY KEY NOT NULL,
 	"name" text NOT NULL,
-	CONSTRAINT "tag_name_unique" UNIQUE("name")
+	CONSTRAINT "tags_name_unique" UNIQUE("name")
 );
 --> statement-breakpoint
-CREATE TABLE IF NOT EXISTS "tags_to_products" (
+CREATE TABLE "tags_to_products" (
 	"tag_id" integer NOT NULL,
-	"product_id" integer NOT NULL
+	"product_id" integer NOT NULL,
+	CONSTRAINT "tags_to_products_tag_id_product_id_pk" PRIMARY KEY("tag_id","product_id")
 );
 --> statement-breakpoint
-DO $$ BEGIN
- ALTER TABLE "tags_to_products" ADD CONSTRAINT "tags_to_products_tag_id_tag_id_fk" FOREIGN KEY ("tag_id") REFERENCES "public"."tag"("id") ON DELETE no action ON UPDATE no action;
-EXCEPTION
- WHEN duplicate_object THEN null;
-END $$;
---> statement-breakpoint
-DO $$ BEGIN
- ALTER TABLE "tags_to_products" ADD CONSTRAINT "tags_to_products_product_id_products_id_fk" FOREIGN KEY ("product_id") REFERENCES "public"."products"("id") ON DELETE no action ON UPDATE no action;
-EXCEPTION
- WHEN duplicate_object THEN null;
-END $$;
+ALTER TABLE "tags_to_products" ADD CONSTRAINT "tags_to_products_tag_id_tags_id_fk" FOREIGN KEY ("tag_id") REFERENCES "public"."tags"("id") ON DELETE cascade ON UPDATE no action;--> statement-breakpoint
+ALTER TABLE "tags_to_products" ADD CONSTRAINT "tags_to_products_product_id_products_id_fk" FOREIGN KEY ("product_id") REFERENCES "public"."products"("id") ON DELETE cascade ON UPDATE no action;

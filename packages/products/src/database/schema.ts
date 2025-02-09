@@ -1,4 +1,11 @@
-import { pgTable, serial, text, numeric, integer } from "drizzle-orm/pg-core";
+import {
+  pgTable,
+  serial,
+  text,
+  numeric,
+  integer,
+  primaryKey,
+} from "drizzle-orm/pg-core";
 
 export const products = pgTable("products", {
   id: serial("id").primaryKey(),
@@ -9,16 +16,20 @@ export const products = pgTable("products", {
   image: text("image"),
 });
 
-export const tags = pgTable("tag", {
+export const tags = pgTable("tags", {
   id: serial("id").primaryKey(),
   name: text("name").unique().notNull(),
 });
 
-export const tagsToProducts = pgTable("tags_to_products", {
-  tagId: integer("tag_id")
-    .notNull()
-    .references(() => tags.id),
-  productId: integer("product_id")
-    .notNull()
-    .references(() => products.id),
-});
+export const tagsToProducts = pgTable(
+  "tags_to_products",
+  {
+    tagId: integer("tag_id")
+      .notNull()
+      .references(() => tags.id, { onDelete: "cascade" }),
+    productId: integer("product_id")
+      .notNull()
+      .references(() => products.id, { onDelete: "cascade" }),
+  },
+  (table) => [primaryKey({ columns: [table.tagId, table.productId] })]
+);

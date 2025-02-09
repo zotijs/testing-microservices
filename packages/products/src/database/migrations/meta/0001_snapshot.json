@@ -1,6 +1,6 @@
 {
-  "id": "825566ba-f537-4623-aa9b-59896e388080",
-  "prevId": "00000000-0000-0000-0000-000000000000",
+  "id": "2f3e5dce-984c-4303-b4d9-e7da0e232f1b",
+  "prevId": "825566ba-f537-4623-aa9b-59896e388080",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
@@ -77,10 +77,10 @@
       "uniqueConstraints": {
         "tags_name_unique": {
           "name": "tags_name_unique",
-          "nullsNotDistinct": false,
           "columns": [
             "name"
-          ]
+          ],
+          "nullsNotDistinct": false
         }
       },
       "policies": {},
@@ -109,28 +109,28 @@
         "tags_to_products_tag_id_tags_id_fk": {
           "name": "tags_to_products_tag_id_tags_id_fk",
           "tableFrom": "tags_to_products",
-          "tableTo": "tags",
           "columnsFrom": [
             "tag_id"
           ],
+          "tableTo": "tags",
           "columnsTo": [
             "id"
           ],
-          "onDelete": "cascade",
-          "onUpdate": "no action"
+          "onUpdate": "no action",
+          "onDelete": "cascade"
         },
         "tags_to_products_product_id_products_id_fk": {
           "name": "tags_to_products_product_id_products_id_fk",
           "tableFrom": "tags_to_products",
-          "tableTo": "products",
           "columnsFrom": [
             "product_id"
           ],
+          "tableTo": "products",
           "columnsTo": [
             "id"
           ],
-          "onDelete": "cascade",
-          "onUpdate": "no action"
+          "onUpdate": "no action",
+          "onDelete": "cascade"
         }
       },
       "compositePrimaryKeys": {
@@ -150,10 +150,10 @@
   },
   "enums": {},
   "schemas": {},
+  "views": {},
   "sequences": {},
   "roles": {},
   "policies": {},
-  "views": {},
   "_meta": {
     "columns": {},
     "schemas": {},

@@ -1,5 +1,6 @@
 import { ASSETS_BASE_URL, DEFAULT_PRODUCT_IMAGE_NAME } from "config";
 
+// remove duplicate
 export type CreateProduct = {
   name: string;
   description: string;

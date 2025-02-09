@@ -5,7 +5,10 @@
     "baseUrl": "./src/",
     "paths": {
       "config": ["config"],
-      "controllers/*": ["controllers/*"],
+      "cache/*": ["cache/*"],
+      "database/*": ["database/*"],
+      "events/*": ["events/*"],
+      "repositories/*": ["repositories/*"],
       "routes/*": ["routes/*"],
       "services/*": ["services/*"]
     },
